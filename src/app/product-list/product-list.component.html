@@ -1,0 +1,25 @@
+<div style="text-align: center;">
+  <h3> Provide with below information and submit. </h3>
+</div>
+<div class="parent">
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" validate>
+  <label for="name">Name</label>
+  <input name="name" id="name" type="name" placeholder="Name" ngModel required>
+
+  <label for="email">Email</label>
+  <input name="email" id="email" type="email" placeholder="Email" ngModel required>
+
+  <label for="Cellno">Cell no</label>
+  <input name="Cellno" id="Cellno" type="Cell-no" placeholder="Cell no" ngModel required>
+
+  <label for="cnic">Cnic</label>
+  <input name="cnic" id="cnic" type="cnic" placeholder="Cnic" ngModel required>
+  <br/>
+  <button>Submit</button>
+  <br/>
+  <p *ngIf="validField">*Please enter these mandatory fields before submitting.
+</form>
+</div>
+
+<!-- <a routerLink="/landing"><button class="btn btn-success" > Submit </button></a> -->
+
